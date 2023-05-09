@@ -20,11 +20,12 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
 
-from config.views import home
+from config.views import home, policy
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home, name="home"),
+    path("policy/", policy, name="policy"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
